@@ -1,5 +1,11 @@
+import BookForm from './bookForm';
+import Book from './book';
+
 const BookList = () => (
-  <h2>Book List Here Too</h2>
+  <div>
+    <Book />
+    <BookForm />
+  </div>
 );
 
 export default BookList;
