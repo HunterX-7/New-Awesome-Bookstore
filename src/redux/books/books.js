@@ -1,6 +1,29 @@
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
+const initialState = [
+  {
+    id: Math.ceil(Math.random()*10000),
+    author: "Sun Tzu",
+    title: "The Art of War",
+  },
+  {
+    id: Math.ceil(Math.random()*10000),
+    author: "Homer",
+    title: "Iliad",
+  },
+  {
+    id: Math.ceil(Math.random()*10000),
+    author: "Jane Austen",
+    title: "Pride and Prejudice",
+  },
+  {
+    id: Math.ceil(Math.random()*10000),
+    author: "Kentaro Miura",
+    title: "Berserk",
+  },
+]
+
 const addBook = (book) => ({
   type: ADD_BOOK,
   payload: book,
@@ -11,18 +34,15 @@ const removeBook = (id) => ({
   payload: id,
 });
 
-const reducerBooks = (state = [], action) => {
+const reducerBooks = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [
         ...state,
-        action.payload,
+        action.book,
       ];
     case REMOVE_BOOK:
-      return (payload) => [
-        ...state.splice(0, payload),
-        ...state.splice(payload + 1, state.length),
-      ];
+      return state.filter((book) => book.id !== action.id);
     default:
       return state;
   }
