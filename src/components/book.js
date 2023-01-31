@@ -1,8 +1,15 @@
 import React from 'react';
 import propTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 
-const Book = ({ books }) => {
-  const { author, title } = books;
+const Book = ({ title, author, id }) => {
+  const dispatch = useDispatch();
+
+  const onClick = (e) => {
+    e.preventDefault();
+    dispatch(removeBook(parseInt(e.target.id, 10)));
+  };
 
   return (
     <>
@@ -10,16 +17,14 @@ const Book = ({ books }) => {
         <div>
           <h5 className="mr-3">Science Fiction</h5>
           <h2 className="mb-0">
-            Title:
             {title}
           </h2>
           <h2 className="mb-0">
-            Author:
             {author}
           </h2>
           <ul className="mb-0 p-0">
             <button type="button" className="btn btn-primary mx-1">Comments</button>
-            <button type="button" className="btn btn-primary mx-1">Remove</button>
+            <button id={id} onClick={onClick} type="button" className="btn btn-primary mx-1">Remove</button>
             <button type="button" className="btn btn-primary mx-1">Edit</button>
           </ul>
         </div>
@@ -42,12 +47,14 @@ const Book = ({ books }) => {
 };
 
 Book.defaultProps = {
-  books: '',
+  id: '',
+  title: '',
   author: '',
 };
 
 Book.propTypes = {
-  books: propTypes.string,
+  id: propTypes.number,
+  title: propTypes.string,
   author: propTypes.string,
 };
 
