@@ -3,26 +3,26 @@ const REMOVE_BOOK = 'REMOVE_BOOK';
 
 const initialState = [
   {
-    id: Math.ceil(Math.random()*10000),
-    author: "Sun Tzu",
-    title: "The Art of War",
+    id: Math.ceil(Math.random() * 10000),
+    author: 'Sun Tzu',
+    title: 'The Art of War',
   },
   {
-    id: Math.ceil(Math.random()*10000),
-    author: "Homer",
-    title: "Iliad",
+    id: Math.ceil(Math.random() * 10000),
+    author: 'Homer',
+    title: 'Iliad',
   },
   {
-    id: Math.ceil(Math.random()*10000),
-    author: "Jane Austen",
-    title: "Pride and Prejudice",
+    id: Math.ceil(Math.random() * 10000),
+    author: 'Jane Austen',
+    title: 'Pride and Prejudice',
   },
   {
-    id: Math.ceil(Math.random()*10000),
-    author: "Kentaro Miura",
-    title: "Berserk",
+    id: Math.ceil(Math.random() * 10000),
+    author: 'Kentaro Miura',
+    title: 'Berserk',
   },
-]
+];
 
 const addBook = (book) => ({
   type: ADD_BOOK,

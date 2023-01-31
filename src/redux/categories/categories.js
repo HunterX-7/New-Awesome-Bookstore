@@ -2,7 +2,7 @@ const CHECK_STATUS = 'CHECK_STATUS';
 
 const checkStatus = () => ({
   type: CHECK_STATUS,
-  payload: 'UNDER CONSTRUCTION',
+  payload: 'UNDER CONSTRUCTION...',
 });
 
 const reducerCategories = (state = [], action) => {
