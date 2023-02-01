@@ -7,6 +7,10 @@
   font-family: 'Oswald', sans-serif;
 }
 
+.weight-300 {
+  font-weight: 300;
+}
+
 .App {
   text-align: center;
 }
