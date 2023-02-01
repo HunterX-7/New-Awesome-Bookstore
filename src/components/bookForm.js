@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addBook } from "../redux/books/books";
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addBook } from '../redux/books/books';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -11,7 +11,7 @@ const BookForm = () => {
     const id = Math.ceil(Math.random() * 10000);
     const book = { title, author, id };
     dispatch(addBook(book));
-  }
+  };
 
   return (
     <form onSubmit={onSubmit}>
@@ -25,7 +25,7 @@ const BookForm = () => {
           <input onChange={(e) => setAuthor(e.target.value)} value={author} type="text" id="book-author" className="form-control" placeholder="Book Author" required />
         </div>
         <div className="col">
-          <button type="submit" className="btn btn-primary">Add Book</button>
+          <button type="submit" className="btn btn-primary">ADD BOOK</button>
         </div>
       </div>
     </form>

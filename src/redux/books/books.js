@@ -14,8 +14,8 @@ const initialState = [
   },
   {
     id: Math.ceil(Math.random() * 10000),
-    author: 'Jane Austen',
-    title: 'Pride and Prejudice',
+    author: 'Stephen King',
+    title: 'The Shining',
   },
   {
     id: Math.ceil(Math.random() * 10000),
@@ -26,12 +26,12 @@ const initialState = [
 
 const addBook = (book) => ({
   type: ADD_BOOK,
-  payload: book,
+  book,
 });
 
 const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  payload: id,
+  id,
 });
 
 const reducerBooks = (state = initialState, action) => {
