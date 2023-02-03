@@ -1,14 +1,14 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-
+import { removeData } from '../redux/books/books';
 
 const Book = ({ title, author, id }) => {
   const dispatch = useDispatch();
 
   const onClick = (e) => {
     e.preventDefault();
-
+    dispatch(removeData(id));
   };
 
   return (

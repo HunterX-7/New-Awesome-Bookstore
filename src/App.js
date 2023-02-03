@@ -4,10 +4,12 @@ import './App.css';
 import { FaUserAlt } from 'react-icons/fa';
 import Books from './pages/bookPage';
 import Categories from './pages/categoryPage';
-
+import { useDispatch } from 'react-redux';
+import { getData } from './redux/books/books';
 
 const App = () => {
-
+  const dispatch = useDispatch();
+  dispatch(getData());
   return (
     <>
       <nav className="navbar navbar-dark bg-primary navbar-expand">

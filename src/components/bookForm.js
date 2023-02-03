@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-
+import { addData } from '../redux/books/books';
+import { v4 as uuidv4 } from 'uuid';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -8,7 +9,11 @@ const BookForm = () => {
   const [author, setAuthor] = useState('');
   const onSubmit = (e) => {
     e.preventDefault();
-
+    const category = 'Science Fiction'
+    const book = { title, author, item_id: uuidv4(), id: uuidv4(), category };
+    dispatch(addData(book));
+    setTitle("");
+    setAuthor("");
   };
 
   return (
