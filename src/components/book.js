@@ -14,32 +14,32 @@ const Book = ({ title, author, id }) => {
   return (
     <>
       <hr />
-      <div className="d-flex justify-content-between align-items-center">
+      <div>
         <div>
-          <h5 className="mr-3 text-secondary">Science Fiction</h5>
-          <h2 className="mb-0">
+          <h5>Science Fiction</h5>
+          <h2>
             {title}
           </h2>
-          <h2 className="weight-300 mb-0">
+          <h2>
             {author}
           </h2>
-          <ul className="mb-0 p-0 mt-2">
-            <button type="button" className="btn btn-outline-primary btn-sm mx-0">Comments</button>
-            <button id={id} onClick={onClick} type="button" className="btn btn-outline-primary btn-sm mx-2">Remove</button>
-            <button type="button" className="btn btn-outline-primary btn-sm mx-0">Edit</button>
+          <ul>
+            <button type="button">Comments</button>
+            <button id={id} onClick={onClick} type="button">Remove</button>
+            <button type="button">Edit</button>
           </ul>
         </div>
 
-        <div className="text-center mr-3">
+        <div>
           <h2>75%</h2>
-          <p className="text-secondary">Completed</p>
+          <p>Completed</p>
         </div>
 
-        <div className="d-flex align-items-center">
+        <div>
           <div>
-            <h5 className="text-secondary weight-300">CURRENT CHAPTER</h5>
-            <h3 className="weight-300">Chapter 12: A New Arrival</h3>
-            <button type="button" className="btn btn-primary">UPDATE PROGRESS</button>
+            <h5>CURRENT CHAPTER</h5>
+            <h3>Chapter 12: A New Arrival</h3>
+            <button type="button">UPDATE PROGRESS</button>
           </div>
         </div>
       </div>
