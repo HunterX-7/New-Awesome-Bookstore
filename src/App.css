@@ -7,6 +7,15 @@
   font-family: 'Oswald', sans-serif;
 }
 
+body {
+  padding: 3%;
+  background-color: #f5f6fa;
+}
+
+#root {
+  background-color: #fafafa;
+}
+
 .weight-300 {
   font-weight: 300;
 }
@@ -17,6 +26,22 @@
 
 .react-icons {
   color: silver;
+}
+
+.navbar-color {
+  background-color: white;
+}
+
+.bookForm {
+  margin-top: 3%;
+}
+
+.book-cards {
+  margin-top: 2%;
+  padding: 2%;
+  background-color: white;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
 }
 
 .progress-divider {

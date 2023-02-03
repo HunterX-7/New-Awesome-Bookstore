@@ -12,7 +12,7 @@ const App = () => {
   dispatch(getData());
   return (
     <>
-      <nav className="navbar navbar-dark bg-primary navbar-expand">
+      <nav className="navbar navbar-dark bg-primary navbar-expand navbar-color">
         <div className="container">
           <Link className="navbar-brand" to="./">New Awesome Bookstore</Link>
           <div className="collapse navbar-collapse">

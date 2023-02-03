@@ -20,7 +20,7 @@ const BookForm = () => {
 
   return (
     <form onSubmit={onSubmit}>
-      <hr />
+      <hr className="bookForm" />
       <h2 className="text-secondary">Add New Book</h2>
       <div className="row g-3">
         <div className="col-6 ms-auto">

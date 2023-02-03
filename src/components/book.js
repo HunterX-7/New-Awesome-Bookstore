@@ -16,8 +16,7 @@ const Book = ({ title, author, id }) => {
 
   return (
     <>
-      <hr />
-      <div className="row align-items-center">
+      <div className="row align-items-center book-cards">
         <div className="col-5">
           <div className="d-flex justify-content-between align-items-center">
             <div>
