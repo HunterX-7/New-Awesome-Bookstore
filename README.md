@@ -142,9 +142,7 @@ npm run build
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] Add more styling to the pages.
-- [ ] Display a list of books.
-- [ ] Add a book.
-- [ ] Remove a selected book.
+- [ ] Add live demo link.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
