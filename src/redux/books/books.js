@@ -1,52 +1,43 @@
+import { createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+
+const API_URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/UkCP3BjA0uZ8iOP3cEAi/books';
+const GET_BOOK = 'GET_BOOK'
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
 
-const initialState = [
-  {
-    id: Math.ceil(Math.random() * 10000),
-    author: 'Sun Tzu',
-    title: 'The Art of War',
-  },
-  {
-    id: Math.ceil(Math.random() * 10000),
-    author: 'Homer',
-    title: 'Iliad',
-  },
-  {
-    id: Math.ceil(Math.random() * 10000),
-    author: 'Stephen King',
-    title: 'The Shining',
-  },
-  {
-    id: Math.ceil(Math.random() * 10000),
-    author: 'Kentaro Miura',
-    title: 'Berserk',
-  },
-];
+const getData = createAsyncThunk(
+  GET_BOOK, async () => axios.get(API_URL).then((response) => {
+    const bookData = Object.keys(response.data).map((key) => ({
+      id : key, ...response.data[key][0]
+    }));
+    return bookData;
+  })
+);
 
-const addBook = (book) => ({
-  type: ADD_BOOK,
-  book,
-});
+const addData = createAsyncThunk(
+  ADD_BOOK, async (book) => axios.post(API_URL, book).then(() => book)
+);
 
-const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  id,
-});
+const removeData = createAsyncThunk(
+  REMOVE_BOOK, async (id) => axios.delete(API_URL + '/' + id, id).then(() => id)
+);
 
-const reducerBooks = (state = initialState, action) => {
+const reducerBooks = (state = [], action) => {
   switch (action.type) {
-    case ADD_BOOK:
+    case `${GET_BOOK}/fulfilled`:
+      return action.payload;
+    case `${ADD_BOOK}/fulfilled`:
       return [
         ...state,
-        action.book,
+        action.payload,
       ];
-    case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.id);
+      case `${REMOVE_BOOK}/fulfilled`:
+        return state.filter((book) => book.id !== action.payload);
     default:
       return state;
   }
 };
 
-export { addBook, removeBook };
+export { addData, removeData, getData };
 export default reducerBooks;

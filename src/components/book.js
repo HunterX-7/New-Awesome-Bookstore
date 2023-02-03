@@ -1,14 +1,14 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+
 
 const Book = ({ title, author, id }) => {
   const dispatch = useDispatch();
 
   const onClick = (e) => {
     e.preventDefault();
-    dispatch(removeBook(parseInt(e.target.id, 10)));
+
   };
 
   return (
@@ -54,7 +54,7 @@ Book.defaultProps = {
 };
 
 Book.propTypes = {
-  id: propTypes.number,
+  id: propTypes.string,
   title: propTypes.string,
   author: propTypes.string,
 };

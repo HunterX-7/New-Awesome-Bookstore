@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -8,9 +8,7 @@ const BookForm = () => {
   const [author, setAuthor] = useState('');
   const onSubmit = (e) => {
     e.preventDefault();
-    const id = Math.ceil(Math.random() * 10000);
-    const book = { title, author, id };
-    dispatch(addBook(book));
+
   };
 
   return (
