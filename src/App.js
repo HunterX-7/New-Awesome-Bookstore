@@ -12,22 +12,22 @@ const App = () => {
   dispatch(getData());
   return (
     <>
-      <nav>
-        <div>
-          <Link to="./">New Awesome Bookstore</Link>
-          <div>
-            <ul>
-              <li>
-                <Link to="./">Books</Link>
+      <nav className="navbar navbar-dark bg-primary navbar-expand">
+        <div className="container">
+          <Link className="navbar-brand" to="./">New Awesome Bookstore</Link>
+          <div className="collapse navbar-collapse">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link" to="./">Books</Link>
               </li>
-              <li>
-                <Link to="/categoryPage">Categories</Link>
+              <li className="nav-item">
+                <Link className="nav-link" to="/categoryPage">Categories</Link>
               </li>
             </ul>
           </div>
-          <div>
-            <ul>
-              <li>
+          <div className="navbar-text">
+            <ul className="navbar-nav">
+              <li className="nav-item">
                 <FaUserAlt />
               </li>
             </ul>
