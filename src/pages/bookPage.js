@@ -1,7 +1,7 @@
 import BookList from '../components/bookList';
 
 const Books = () => (
-  <div className="container p-5">
+  <div className="container p-4">
     <BookList />
   </div>
 );

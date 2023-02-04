@@ -20,17 +20,19 @@ const BookForm = () => {
 
   return (
     <form onSubmit={onSubmit}>
-      <hr />
-      <h2>Add New Book</h2>
+      <hr className="bookForm" />
+      <h2 className="text-secondary">Add New Book</h2>
       <div className="row g-3">
-        <div className="col">
-          <input onChange={(e) => setTitle(e.target.value)} value={title} type="text" id="book-name" placeholder="Book Title" required />
+        <div className="col-6 ms-auto">
+          <input onChange={(e) => setTitle(e.target.value)} value={title} type="text" id="book-name" className="form-control" placeholder="Book Title" required />
         </div>
-        <div className="col">
-          <input onChange={(e) => setAuthor(e.target.value)} value={author} type="text" id="book-author" placeholder="Book Author" required />
+        <div className="col-4 ms-auto">
+          <input onChange={(e) => setAuthor(e.target.value)} value={author} type="text" id="book-author" className="form-control" placeholder="Book Author" required />
         </div>
-        <div className="col">
-          <button type="submit">ADD BOOK</button>
+        <div className="col-2 ms-auto">
+          <div className="d-grid">
+            <button type="submit" className="btn btn-primary">ADD BOOK</button>
+          </div>
         </div>
       </div>
     </form>

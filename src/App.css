@@ -7,8 +7,58 @@
   font-family: 'Oswald', sans-serif;
 }
 
+body {
+  padding: 3%;
+  background-color: #f5f6fa;
+}
+
+#root {
+  background-color: #fafafa;
+}
+
 .weight-300 {
   font-weight: 300;
+}
+
+.underline {
+  text-decoration: none;
+}
+
+.react-icons {
+  color: silver;
+}
+
+.navbar-color {
+  background-color: white;
+}
+
+.bookForm {
+  margin-top: 3%;
+}
+
+.book-cards {
+  margin-top: 2%;
+  padding: 2%;
+  background-color: white;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+}
+
+.progress-divider {
+  width: 0.125rem;
+  height: 4.375rem;
+  margin: 0 3.688rem 0 4.938rem;
+  background-color: #e8e8e8;
+}
+
+.circular-progress {
+  border-radius: 50%;
+  width: 5.25rem;
+  height: 5.25rem;
+  border: 5px solid #307bbe;
+  border-left-color: #e8e8e8;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .App {
