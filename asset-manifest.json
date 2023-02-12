@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/New-Awesome-Bookstore/static/css/main.e973379d.css",
+    "main.js": "/New-Awesome-Bookstore/static/js/main.c8f25dd4.js",
+    "index.html": "/New-Awesome-Bookstore/index.html",
+    "main.e973379d.css.map": "/New-Awesome-Bookstore/static/css/main.e973379d.css.map",
+    "main.c8f25dd4.js.map": "/New-Awesome-Bookstore/static/js/main.c8f25dd4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e973379d.css",
+    "static/js/main.c8f25dd4.js"
+  ]
+}
