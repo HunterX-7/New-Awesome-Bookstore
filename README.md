@@ -69,7 +69,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](#) Coming soon...
+- [Live Demo](https://hunterx-7.github.io/New-Awesome-Bookstore/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
